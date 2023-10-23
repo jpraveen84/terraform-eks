@@ -6,3 +6,4 @@ variable "enable_dns_support" {}
 variable "app_name" {}
 variable "env" {}
 variable "create_vpc" {}
+variable "newbits" {}

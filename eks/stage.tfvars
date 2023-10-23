@@ -6,3 +6,4 @@ enable_dns_support = true
 app_name = "selfsign"
 env = "staging"
 create_vpc = true
+newbits = 8
