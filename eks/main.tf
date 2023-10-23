@@ -15,3 +15,15 @@ provider "aws" {
   profile = var.aws_profile
 }
 
+
+terraform {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "Selfsign"
+
+    workspaces {
+      prefix = "terraform-"
+    }
+  }
+}
+
