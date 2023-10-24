@@ -18,17 +18,17 @@ module "eks" {
   }
 
   eks_managed_node_groups = {
-    spot = {
+    general = {
       desired_size = 1
       min_size     = 1
       max_size     = 10
 
       labels = {
-        role = "spot"
+        role = "ondemand"
       }
 
       instance_types = ["t3.micro"]
-      capacity_type  = "SPOT"
+      capacity_type  = "ON_DEMAND"
     }
   }
 
