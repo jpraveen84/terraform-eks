@@ -18,17 +18,17 @@ module "eks" {
   }
 
   eks_managed_node_groups = {
-    general = {
+    selfsign = {
       desired_size = 1
       min_size     = 1
       max_size     = 10
 
       labels = {
-        role = "ondemand"
+        role = "spot"
       }
 
       instance_types = ["t3.micro"]
-      capacity_type  = "ON_DEMAND"
+      capacity_type  = "SPOT"
     }
   }
 
